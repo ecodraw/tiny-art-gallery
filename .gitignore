@@ -4,3 +4,7 @@
 
 # dependencies
 /node_modules
+
+# generated code
+app/**/*.js
+app/**/*.map
