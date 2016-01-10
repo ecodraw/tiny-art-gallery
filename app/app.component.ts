@@ -3,17 +3,28 @@ import {Component, Directive} from 'angular2/core';
 @Component({
     selector: 'art-image',
     template:`
-        <h2> My Image</h2>
+        <div> My Image</div>
        `
 })
 export class ArtImage { }
 
 
 @Component({
+    selector: 'gallery-header',
+    template:`
+        <div>Header</div>
+       `
+})
+export class GalleryHeader { }
+
+
+@Component({
     selector: 'my-app',
-    directives: [ArtImage],
+    directives: [ArtImage, GalleryHeader],
     template:`
         <h1> My Art-Gallery</h1>
+        <gallery-header>...</gallery-header>
+        <art-image>...</art-image>
         <art-image>...</art-image>
        `,
 
