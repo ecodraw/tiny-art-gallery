@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ecodraw/art-gallery.git"
+    "url": "git+https://github.com/ecodraw/tiny-art-gallery.git"
   },
   "author": "ecodraw",
   "license": "MIT",
