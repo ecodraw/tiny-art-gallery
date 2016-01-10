@@ -9,31 +9,41 @@ System.register(['angular2/core'], function(exports_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent, MyArt;
+    var ArtImage, AppComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
+            ArtImage = (function () {
+                function ArtImage() {
+                }
+                ArtImage = __decorate([
+                    core_1.Component({
+                        selector: 'art-image',
+                        template: "\n        <h2> My Image</h2>\n       "
+                    }), 
+                    __metadata('design:paramtypes', [])
+                ], ArtImage);
+                return ArtImage;
+            })();
+            exports_1("ArtImage", ArtImage);
             AppComponent = (function () {
                 function AppComponent() {
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "\n        <h1> My Art-Gallery</h1>\n        <h1>...</h1>\n       ",
+                        directives: [ArtImage],
+                        template: "\n        <h1> My Art-Gallery</h1>\n        <art-image>...</art-image>\n       ",
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);
                 return AppComponent;
             })();
             exports_1("AppComponent", AppComponent);
-            MyArt = (function () {
-                function MyArt() {
-                }
-                return MyArt;
-            })();
+            ;
         }
     }
 });
