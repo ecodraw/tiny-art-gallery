@@ -4,8 +4,12 @@ import {Component, Directive} from 'angular2/core';
     selector: 'art-image',
     inputs: ['image'],
     template:`
-        <div *ngFor="#name of names"> Value:{{name}} {{value}}</div>
-        <button (click)="bingo()" class="button">Click </button>
+        <div *ngFor="#name of names">{{name}}</div>
+        <div>Value: {{value}}</div>
+        <button (click)="add()" class="button">+1 </button>
+        <button (click)="remove()" class="button">-1 </button>
+        <br>
+        <br>
        `
 })
 export class ArtImage { 
@@ -14,15 +18,19 @@ export class ArtImage {
     value: number; 
     
     constructor() {
-        this.names = ['Test', 'Bing'];
+        this.names = ['BlueWonder', 'RedRose'];
         this.image = new Image();
         this.value = this.image.getCount();
     }
     
-    bingo(): void{
+    add(): void{
         this.image.plus();
         this.value = this.image.getCount();
         //alert("Gugus");
+    }
+    remove(): void{
+        this.image.minus();
+        this.value = this.image.getCount();
     }
 }
 
