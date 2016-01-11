@@ -3,10 +3,17 @@ import {Component, Directive} from 'angular2/core';
 @Component({
     selector: 'art-image',
     template:`
-        <div> My Image</div>
+        <div *ngFor="#name of names"> Value:{{name}}</div>
        `
 })
-export class ArtImage { }
+export class ArtImage { 
+    names: string[];
+    
+    
+    constructor() {
+        this.names = ['Test', 'Bing'];
+    }
+}
 
 
 @Component({
@@ -15,17 +22,20 @@ export class ArtImage { }
         <div>Header</div>
        `
 })
-export class GalleryHeader { }
+export class GalleryHeader { 
+    
+    
+}
 
 
 @Component({
     selector: 'my-app',
     directives: [ArtImage, GalleryHeader],
     template:`
-        <h1> My Art-Gallery</h1>
+        <h1>My Art-Gallery</h1>
         <gallery-header>...</gallery-header>
-        <art-image>...</art-image>
-        <art-image>...</art-image>
+        <art-image> ...</art-image>
+        <art-image> ...</art-image>
        `,
 
 })
