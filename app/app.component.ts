@@ -5,9 +5,14 @@ import {Component, Directive} from 'angular2/core';
     inputs: ['image'],
     template:`
         <div *ngFor="#name of names">{{name}}</div>
-        <div>Value: {{value}}</div>
+        <div>Value: {{val}}</div>
+        <div class="field">
+           <label for="link">Value:</label>
+           <input type="number" #inputvalue>
+        </div>
         <button (click)="add()" class="button">+1 </button>
         <button (click)="remove()" class="button">-1 </button>
+        <button (click)="addValue(inputvalue.value)" class="button">add </button>
         <br>
         <br>
        `
@@ -15,22 +20,30 @@ import {Component, Directive} from 'angular2/core';
 export class ArtImage { 
     names: string[];
     image: Image;
-    value: number; 
+    val: number; 
+    inputvalue: number;
+
     
     constructor() {
         this.names = ['BlueWonder', 'RedRose'];
         this.image = new Image();
-        this.value = this.image.getCount();
+        this.val = this.image.getCount();
     }
     
     add(): void{
         this.image.plus();
-        this.value = this.image.getCount();
+        this.val = this.image.getCount();
         //alert("Gugus");
     }
+    addValue(inputVal: number): void{
+        this.image.plusVal(inputVal);
+        this.val = this.image.getCount();
+        //alert("Gugus");
+    }
+    
     remove(): void{
         this.image.minus();
-        this.value = this.image.getCount();
+        this.val = this.image.getCount();
     }
 }
 
@@ -50,11 +63,15 @@ class Image {
     }
     
     plus(): void{
-        this.count +=1;
+        this.count += 1;
+    }
+    
+    plusVal(val: number): void{
+        this.count = val;
     }
     
     minus(): void{
-        this.count -=1;
+        this.count -= 1;
     }
 }
 
