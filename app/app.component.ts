@@ -71,13 +71,37 @@ export class GalleryHeader {
 
 
 @Component({
+    selector: 'art-control',
+    template:`
+        <div>Art Control</div>
+       `
+})
+export class ArtControl { 
+    
+    
+}
+
+@Component({
+    selector: 'art-view',
+    directives: [ArtImage, ArtControl],
+    template:`
+        <div>Art View</div>
+        <art-image> ...</art-image>
+        <art-control> ...</art-control>
+       `
+})
+export class ArtView { 
+    
+    
+}
+
+@Component({
     selector: 'my-app',
-    directives: [ArtImage, GalleryHeader],
+    directives: [GalleryHeader, ArtView],
     template:`
         <h1>My Art-Gallery</h1>
         <gallery-header>...</gallery-header>
-        <art-image> ...</art-image>
-        <art-image> ...</art-image>
+        <art-view> ...</art-view>
        `,
 
 })
