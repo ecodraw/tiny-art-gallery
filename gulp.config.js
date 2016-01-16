@@ -1,7 +1,14 @@
 module.exports = function() {
 	var config = {
-		allTs: './app/**/*.ts',
-		tsOutputPath: './app/' 	
+		allHtml: './src/**/*.html',
+		allTs: './src/**/*.ts',
+		allImages: './src/**/*.png',
+		allTypings: './typings/**/*.d.ts',
+		extLibs: [
+            './src/vendor/**/*'
+        ],
+		destLibPath: './dist-root/vendor/',
+		destSrcPath: './dist-root/' 	
 	};
 	
 	return config;

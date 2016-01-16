@@ -1,5 +1,5 @@
 import {Component, Directive} from 'angular2/core';
-import {ArtSystem} from 'app/components/art-system';
+import {ArtSystem} from './components/art-system';
 @Component({
     selector: 'gallery-header',
     template:`

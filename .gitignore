@@ -1,10 +1,11 @@
 # compiled output
-/dist
+/dist-root
+/.dist-root
 /tmp
 
 # dependencies
 /node_modules
 
 # generated code
-app/**/*.js
-app/**/*.map
+dist-root/**/*.js
+dist-root/**/*.map

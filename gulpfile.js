@@ -18,7 +18,7 @@ gulp.task('ts-lint', function() {
 
 gulp.task('compile-ts', function() {
     var sourceTsFiles = [
-        config.allTs
+        config.allTs, config.allTypings
     ];
 
     var tsResult = gulp
@@ -28,10 +28,27 @@ gulp.task('compile-ts', function() {
 
     return tsResult.js
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(config.tsOutputPath));
+        .pipe(gulp.dest(config.destSrcPath));
 });
 
-gulp.task('serve', ['ts-lint', 'compile-ts'], function() {
+gulp.task('html-copy', function() {
+    return gulp.src(config.allHtml)
+        .pipe(gulp.dest(config.destSrcPath));
+});
+
+gulp.task('resource-copy', function() {
+    return gulp.src(config.allImages)
+        .pipe(gulp.dest(config.destSrcPath));
+});
+
+gulp.task('lib-copy', function() {
+    return gulp.src(config.extLibs)
+        .pipe(gulp.dest(config.destLibPath));
+});
+
+gulp.task('dev', ['ts-lint', 'compile-ts', 'html-copy', 'resource-copy', 'lib-copy']);
+
+gulp.task('serve', ['dev'], function() {
     	
     gulp.watch([config.allTs], ['ts-lint', 'compile-ts']);
 	
@@ -44,7 +61,7 @@ gulp.task('serve', ['ts-lint', 'compile-ts'], function() {
         notify: true,
         reloadDelay: 0,
         server: {
-            baseDir: ['./'],
+            baseDir: ['./dist-root'],
             middleware: superstatic({ debug: false})
         }
     });	
