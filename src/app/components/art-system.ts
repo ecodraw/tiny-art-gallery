@@ -3,7 +3,7 @@ import {Component, Directive} from 'angular2/core';
 
 @Component({
     selector: 'art-image',
-    styleUrls: ["app/components/art-system.css"],
+    styleUrls: ['app/components/art-system.css'],
     inputs: ['image'],
     template:`
         <div *ngFor="#name of names">{{name}}</div>
@@ -24,26 +24,23 @@ export class ArtImage {
     image: Image;
     val: number;
     inputvalue: number;
-
-    
     constructor() {
         this.names = ['BlueWonder', 'RedRose'];
         this.image = new Image();
         this.val = this.image.getCount();
     }
-    
-    add(): void{
+    add(): void {
         this.image.plus();
         this.val = this.image.getCount();
         //alert("Gugus");
     }
-    addValue(inputVal: number): void{
+    addValue(inputVal: number): void {
         this.image.plusVal(inputVal);
         this.val = this.image.getCount();
         //alert("Gugus");
     }
-    
-    remove(): void{
+
+    remove(): void {
         this.image.minus();
         this.val = this.image.getCount();
     }
@@ -53,26 +50,26 @@ class Image {
     title: string;
     link: string;
     count: number;
-    
+
     constructor() {
         this.title = 'BlueLove';
         this.link = 'http://www.local.ch';
         this.count = 10;
     }
 
-    getCount(): number{
+    getCount(): number {
         return this.count;
     }
-    
-    plus(): void{
+
+    plus(): void {
         this.count += 1;
     }
-    
-    plusVal(val: number): void{
+
+    plusVal(val: number): void {
         this.count = val;
     }
-    
-    minus(): void{
+
+    minus(): void {
         this.count -= 1;
     }
 }
@@ -96,7 +93,4 @@ export class ArtControl {}
         <art-control> ...</art-control>
        `
 })
-export class ArtSystem { 
-    
-    
-}
+export class ArtSystem {}

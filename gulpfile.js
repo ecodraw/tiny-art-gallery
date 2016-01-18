@@ -56,6 +56,8 @@ gulp.task('dev', ['ts-lint', 'compile-ts', 'html-copy', 'css-copy', 'resource-co
 gulp.task('serve', ['dev'], function() {
     	
     gulp.watch([config.allTs], ['ts-lint', 'compile-ts']);
+    gulp.watch([config.allCss], ['css-copy', 'ts-lint', 'compile-ts']);
+    gulp.watch([config.allHtml], ['html-copy', 'ts-lint', 'compile-ts']);
 	
     browserSync({
         port: 3000,

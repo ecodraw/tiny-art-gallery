@@ -9,8 +9,8 @@ module.exports = function() {
             './src/vendor/**/*'
         ],
 		destLibPath: './dist-root/vendor/',
-		destSrcPath: './dist-root/' 	
+		destSrcPath: './dist-root/'
 	};
-	
+
 	return config;
 }

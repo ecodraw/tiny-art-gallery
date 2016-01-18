@@ -11,10 +11,9 @@ export class GalleryHeader {}
     selector: 'my-app',
     directives: [GalleryHeader, ArtSystem],
     template:`
-        <h1>My Art-Gallery</h1>
+        <h1>Art-Gallery</h1>
         <gallery-header>...</gallery-header>
         <art-system> ...</art-system>
-       `,
-
+       `
 })
 export class AppComponent { };
