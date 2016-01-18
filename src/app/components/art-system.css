@@ -1,0 +1,8 @@
+.button {
+  box-sizing: border-box;
+  height: 100%;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-color: #a9a9a9;
+  padding: 10px 20px 0 5px;
+}

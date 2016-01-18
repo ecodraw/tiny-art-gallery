@@ -36,6 +36,11 @@ gulp.task('html-copy', function() {
         .pipe(gulp.dest(config.destSrcPath));
 });
 
+gulp.task('css-copy', function() {
+    return gulp.src(config.allCss)
+        .pipe(gulp.dest(config.destSrcPath));
+});
+
 gulp.task('resource-copy', function() {
     return gulp.src(config.allImages)
         .pipe(gulp.dest(config.destSrcPath));
@@ -46,7 +51,7 @@ gulp.task('lib-copy', function() {
         .pipe(gulp.dest(config.destLibPath));
 });
 
-gulp.task('dev', ['ts-lint', 'compile-ts', 'html-copy', 'resource-copy', 'lib-copy']);
+gulp.task('dev', ['ts-lint', 'compile-ts', 'html-copy', 'css-copy', 'resource-copy', 'lib-copy']);
 
 gulp.task('serve', ['dev'], function() {
     	

@@ -3,6 +3,7 @@ import {Component, Directive} from 'angular2/core';
 
 @Component({
     selector: 'art-image',
+    styleUrls: ["app/components/art-system.css"],
     inputs: ['image'],
     template:`
         <div *ngFor="#name of names">{{name}}</div>
