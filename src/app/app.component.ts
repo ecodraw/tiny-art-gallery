@@ -13,7 +13,6 @@ export class GalleryHeader {}
     directives: [GalleryHeader, ArtSystem],
     template:`
         <h1 class="titel">Top</h1>
-        <div id="hugo">Hugo</div>
         <gallery-header>...</gallery-header>
         <art-system>...</art-system>
        `

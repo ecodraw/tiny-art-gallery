@@ -18,7 +18,7 @@ class Picture {
     },
     styleUrls: ['app/components/art-system.css'],
     template: `
-        <div>Picture: {d{picture.name}}</div>
+        <div class="pic">Name: {{picture.name}} Link: {{picture.link}}</div>
        `
 })
 export class ArtPicture {
@@ -30,7 +30,7 @@ export class ArtPicture {
     directives: [ArtPicture],
     styleUrls: ['app/components/art-system.css'],
     template: `
-        <art-picture *ngFor="#picture of pictures">[picture]="picture"</art-picture>
+        <art-picture *ngFor="#picture of pictures"[picture]="picture"></art-picture>
         <div>Value: {{amount}}</div>
         <div class="field">
            <label for="link">Value:</label>
