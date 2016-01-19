@@ -47,7 +47,6 @@ export class ArtImages {
     pictures: Picture[];
     amount: number;
     inputvalue: number;
-    
     constructor() {
         this.pictures = [
             new Picture('Blue', 'www.a'),
