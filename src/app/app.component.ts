@@ -12,10 +12,10 @@ export class GalleryHeader {}
     styleUrls: ['app/app.component.css'],
     directives: [GalleryHeader, ArtSystem],
     template:`
-        <h1 class="titel">Art-Gallery</h1>
+        <h1 class="titel">Top</h1>
         <div id="hugo">Hugo</div>
         <gallery-header>...</gallery-header>
-        <art-system> ...</art-system>
+        <art-system>...</art-system>
        `
 })
 export class AppComponent { };

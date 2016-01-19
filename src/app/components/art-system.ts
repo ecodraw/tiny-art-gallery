@@ -1,29 +1,36 @@
 import {Component, Directive} from 'angular2/core';
 
-@Component({
-    selector: 'art-picture',
-    inputs: ['ArtPicture'],
-    styleUrls: ['app/components/art-system.css'],
-    template:`
-        Picture: {{title}}
-       `
-})
-export class ArtPicture {
-    title: string;
+class Picture {
+    name: string;
     link: string;
-    constructor(t: string) {
-        this.title = t;
-        this.link = 'http://www.local.ch';
+
+    constructor(name: string, link: string) {
+        this.name = name;
+        this.link = link;
     }
 }
 
+@Component({
+    selector: 'art-picture',
+    inputs: ['picture'],
+    host: {
+        class: 'pic'
+    },
+    styleUrls: ['app/components/art-system.css'],
+    template: `
+        <div>Picture: {d{picture.name}}</div>
+       `
+})
+export class ArtPicture {
+    picture: Picture;
+}
 
 @Component({
     selector: 'art-images',
     directives: [ArtPicture],
     styleUrls: ['app/components/art-system.css'],
-    template:`
-        <art-picture *ngFor="#pic of pictures">[Picture]={{pic}}</art-picture>
+    template: `
+        <art-picture *ngFor="#picture of pictures">[picture]="picture"</art-picture>
         <div>Value: {{amount}}</div>
         <div class="field">
            <label for="link">Value:</label>
@@ -37,19 +44,18 @@ export class ArtPicture {
        `
 })
 export class ArtImages {
-    names: string[];
-    pictures: ArtPicture[];
+    pictures: Picture[];
     amount: number;
-    pica: ArtPicture;
-    picb: ArtPicture;
     inputvalue: number;
+    
     constructor() {
-        this.names = ['BlueWonder', 'RedRose'];
-        this.pica = new ArtPicture('Blue');
-        this.picb = new ArtPicture('Red');
-        this.pictures = [this.pica, this.picb];
+        this.pictures = [
+            new Picture('Blue', 'www.a'),
+            new Picture('Red', 'www.b')
+        ];
         this.amount = 44;
     }
+    
     getCount(): number {
         return this.amount;
     }
@@ -70,23 +76,22 @@ export class ArtImages {
 }
 
 
-
 @Component({
     selector: 'art-control',
-    template:`
-        <div>Art Control</div>
+    template: `
+        <div>Control</div>
        `
 })
-export class ArtControl {}
+export class ArtControl { }
 
 
 @Component({
     selector: 'art-system',
     directives: [ArtImages, ArtControl],
-    template:`
-        <div>Art View</div>
+    template: `
+        <div>View</div>
         <art-images> ...</art-images>
         <art-control> ...</art-control>
        `
 })
-export class ArtSystem {}
+export class ArtSystem { }
