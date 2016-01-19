@@ -16,9 +16,12 @@ div.pic {
     padding: 5px;
     width: 100px;
     height: 100px;
-    color: dimgrey;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightslategray;
     border-radius: 5px;
     border-style: solid;
     border-left-style: solid;
-    border-color: dimgrey;
+    border-color: dimgrey
+    
 }

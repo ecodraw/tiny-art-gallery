@@ -50,7 +50,8 @@ export class ArtImages {
     constructor() {
         this.pictures = [
             new Picture('Blue', 'www.a'),
-            new Picture('Red', 'www.b')
+            new Picture('Red', 'www.b'),
+            new Picture('Green', 'www.c')
         ];
         this.amount = 44;
     }
