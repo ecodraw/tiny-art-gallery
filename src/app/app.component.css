@@ -1,0 +1,20 @@
+#hugo {
+    color: white;
+    background-color: darkcyan;
+    box-sizing: border-box;
+    height: 40px;
+    width: 200px;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-color: darkslategrey;
+    padding: 10px 20px 10px 5px;
+    margin: 10px;
+}
+
+h1.titel {
+    color: red;
+    background-color: darkcyan;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-color: darkslategrey;
+}

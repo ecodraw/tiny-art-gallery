@@ -9,9 +9,11 @@ import {ArtSystem} from './components/art-system';
 export class GalleryHeader {}
 @Component({
     selector: 'my-app',
+    styleUrls: ['app/app.component.css'],
     directives: [GalleryHeader, ArtSystem],
     template:`
-        <h1>Art-Gallery</h1>
+        <h1 class="titel">Art-Gallery</h1>
+        <div id="hugo">Hugo</div>
         <gallery-header>...</gallery-header>
         <art-system> ...</art-system>
        `
