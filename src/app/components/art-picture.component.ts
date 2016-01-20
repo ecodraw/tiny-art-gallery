@@ -7,9 +7,9 @@ import {Picture} from '../model/art-model';
     host: {
         class: 'pic'
     },
-    styleUrls: ['app/components/art-app.css'],
+    styleUrls: ['app/components/art-picture.component.css'],
     template: `
-        <div class="pic">Name: {{picture.name}} Link: {{picture.link}}</div>
+        <div class="picture">Name: {{picture.name}} Link: {{picture.link}}</div>
        `
 })
 export class ArtPicture {

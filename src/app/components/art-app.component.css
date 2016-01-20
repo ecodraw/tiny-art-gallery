@@ -10,18 +10,17 @@
   padding: 10px 20px 10px 5px;
   margin: 10px;
 }
-
-div.pic {
+div.View {
     margin: 10px;
     padding: 5px;
-    width: 100px;
-    height: 100px;
-    color: whitesmoke;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: lightslategray;
-    border-radius: 5px;
-    border-style: solid;
-    border-left-style: solid;
-    border-color: dimgrey
+    background-color: yellow;
+    position: absolute;    
+}
+div.Control {
+    margin: 10px;
+    padding: 5px;
+    background-color: teal;
+    position: absolute;
+    left: 200px;
     
 }
