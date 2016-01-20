@@ -1,6 +1,5 @@
 import {Component, Directive} from 'angular2/core';
-import {ArtControl} from './art-control';
-import {ArtPicture} from './art-picture';
+import {ArtPicture} from './art-picture.component';
 import {Picture} from '../../app/model/art-model';
 
 @Component({
