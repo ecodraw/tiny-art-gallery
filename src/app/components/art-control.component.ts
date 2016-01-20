@@ -3,7 +3,8 @@ import {Collection} from '../model/art-model';
 
 @Component({
     selector: 'art-control',
-    inputs:['collection'],
+    inputs: ['collection'],
+    styleUrls: ['app/components/art-control.component.css'],
     template: `
         <div>Control</div>
         <div class="field">

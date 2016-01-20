@@ -1,0 +1,12 @@
+.button {
+  color: white;
+  background-color: seagreen;
+  box-sizing: border-box;
+  height: 40px;
+  width: 40px;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-color: darkslategrey;
+  padding: 10px 20px 10px 5px;
+  margin: 10px;
+}
