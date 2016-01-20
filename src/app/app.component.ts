@@ -1,5 +1,5 @@
 import {Component, Directive} from 'angular2/core';
-import {ArtSystem} from './components/art-system';
+import {ArtApp} from './components/art-app';
 @Component({
     selector: 'gallery-header',
     template:`
@@ -10,11 +10,11 @@ export class GalleryHeader {}
 @Component({
     selector: 'my-app',
     styleUrls: ['app/app.component.css'],
-    directives: [GalleryHeader, ArtSystem],
+    directives: [GalleryHeader, ArtApp],
     template:`
         <h1 class="titel">Top</h1>
         <gallery-header>...</gallery-header>
-        <art-system>...</art-system>
+        <art-app>...</art-app>
        `
 })
 export class AppComponent { };

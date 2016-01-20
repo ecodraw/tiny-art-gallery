@@ -1,34 +1,12 @@
 import {Component, Directive} from 'angular2/core';
-
-class Picture {
-    name: string;
-    link: string;
-
-    constructor(name: string, link: string) {
-        this.name = name;
-        this.link = link;
-    }
-}
-
-@Component({
-    selector: 'art-picture',
-    inputs: ['picture'],
-    host: {
-        class: 'pic'
-    },
-    styleUrls: ['app/components/art-system.css'],
-    template: `
-        <div class="pic">Name: {{picture.name}} Link: {{picture.link}}</div>
-       `
-})
-export class ArtPicture {
-    picture: Picture;
-}
+import {ArtControl} from './art-control';
+import {ArtPicture} from './art-picture';
+import {Picture} from '../../app/model/art-model';
 
 @Component({
     selector: 'art-images',
     directives: [ArtPicture],
-    styleUrls: ['app/components/art-system.css'],
+    styleUrls: ['app/components/art-app.css'],
     template: `
         <art-picture *ngFor="#picture of pictures"[picture]="picture"></art-picture>
         <div>Value: {{amount}}</div>
@@ -55,7 +33,7 @@ export class ArtImages {
         ];
         this.amount = 44;
     }
-    
+
     getCount(): number {
         return this.amount;
     }
@@ -74,24 +52,3 @@ export class ArtImages {
         return false;
     }
 }
-
-
-@Component({
-    selector: 'art-control',
-    template: `
-        <div>Control</div>
-       `
-})
-export class ArtControl { }
-
-
-@Component({
-    selector: 'art-system',
-    directives: [ArtImages, ArtControl],
-    template: `
-        <div>View</div>
-        <art-images> ...</art-images>
-        <art-control> ...</art-control>
-       `
-})
-export class ArtSystem { }
