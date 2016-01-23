@@ -6,7 +6,7 @@ import {Picture, Collection} from '../../app/model/art-model';
     selector: 'art-images',
     directives: [ArtPicture],
     inputs: ['collection'],
-    styleUrls: ['app/components/art-app.css'],
+    styleUrls: ['app/components/art-image.component.css'],
     template: `
         <art-picture *ngFor="#picture of collection.pictures"[picture]="picture"></art-picture>
         <div>Value: {{amount}}</div>

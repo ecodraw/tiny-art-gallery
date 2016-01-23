@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
 var tsc = require('gulp-typescript');
 var tslint = require('gulp-tslint');
+var sass = require('gulp-ruby-sass');
 var tsProject = tsc.createProject('tsconfig.json');
 var config = require('./gulp.config')();
 
@@ -30,14 +31,19 @@ gulp.task('compile-ts', function() {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.destSrcPath));
 });
+gulp.task('scss-transpile', function() {
+    return sass(config.allScss, { style: 'expanded' })
+        .pipe(gulp.dest(config.destSrcPath));
+});
 
 gulp.task('html-copy', function() {
     return gulp.src(config.allHtml)
         .pipe(gulp.dest(config.destSrcPath));
 });
 
-gulp.task('css-copy', function() {
-    return gulp.src(config.allCss)
+
+gulp.task('json-copy', function() {
+    return gulp.src(config.allJson)
         .pipe(gulp.dest(config.destSrcPath));
 });
 
@@ -51,15 +57,17 @@ gulp.task('lib-copy', function() {
         .pipe(gulp.dest(config.destLibPath));
 });
 
-gulp.task('dev', ['ts-lint', 'compile-ts', 'html-copy', 'css-copy', 'resource-copy', 'lib-copy']);
-
-gulp.task('serve', ['dev'], function() {
-    	
+gulp.task('watch', function(){
     gulp.watch([config.allTs], ['ts-lint', 'compile-ts']);
-    gulp.watch([config.allCss], ['css-copy', 'ts-lint', 'compile-ts']);
+    gulp.watch(config.allScss, ['scss-transpile', 'ts-lint', 'compile-ts']);
     gulp.watch([config.allHtml], ['html-copy', 'ts-lint', 'compile-ts']);
-	
-    browserSync({
+    gulp.watch([config.allJson], ['json-copy', 'ts-lint', 'compile-ts']);
+})
+
+gulp.task('dev', ['ts-lint', 'compile-ts', 'html-copy', 'scss-transpile', 'json-copy', 'resource-copy', 'lib-copy']);
+
+gulp.task('serve', ['dev', 'watch'], function() {
+    	browserSync({
         port: 3000,
         files: ['index.html', '**/*.js'],
         injectChanges: true,

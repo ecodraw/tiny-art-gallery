@@ -1,6 +1,7 @@
 # compiled output
 /dist-root
 /.dist-root
+/.sass-cache
 /tmp
 
 # dependencies

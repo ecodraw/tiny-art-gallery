@@ -1,7 +1,8 @@
 module.exports = function() {
 	var config = {
 		allHtml: './src/**/*.html',
-        allCss: './src/**/*.css',
+        allScss: './src/**/*.scss',
+        allJson: './src/**/*.json',
 		allTs: './src/**/*.ts',
 		allImages: './src/**/*.png',
 		allTypings: './typings/**/*.d.ts',

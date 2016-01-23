@@ -1,6 +1,7 @@
 {
   "name": "art-gallery",
   "version": "1.0.0",
+  "description": "Art-Gallery mit Angular 2.0 beta",
   "main": "gulpfile.js",
   "scripts": {
     "tsc": "tsc",
@@ -15,8 +16,8 @@
   "author": "ecodraw",
   "license": "MIT",
   "dependencies": {
-    "angular2": "2.0.0-beta.0",
-    "systemjs": "0.19.6",
+    "angular2": "2.0.0-beta.1",
+    "systemjs": "0.19.17",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
     "reflect-metadata": "0.1.2",
@@ -27,11 +28,13 @@
     "concurrently": "^1.0.0",
     "browser-sync": "^2.9.3",
     "gulp": "^3.9.0",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-tslint": "^3.2.0",
+    "gulp-ruby-sass": "=2.0.6",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tslint": "^4.3.0",
     "gulp-typescript": "^2.10.0",
     "superstatic": "^1.2.3",
     "lite-server": "^1.3.1",
-    "typescript": "^1.7.3"
+    "tslint": "=3.2.1",
+    "typescript": "^1.7.5"
   }
 }
