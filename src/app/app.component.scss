@@ -1,4 +1,4 @@
-@import '../resources/styles/common-styles';
+@import '../resources/styles/common-variables';
 
 h1.titel {
     color: goldenrod;
@@ -6,7 +6,7 @@ h1.titel {
     border-left-width: 1px;
     border-left-style: solid;
     border-color: darkslategrey;
-    border-radius: 10px;
+    border-radius: $size-text-default * 2;
     margin: 10px;
     padding: 10px;
 }

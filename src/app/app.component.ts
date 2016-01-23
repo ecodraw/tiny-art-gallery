@@ -2,7 +2,6 @@ import {Component, Directive} from 'angular2/core';
 import {ArtApp} from './components/art-app.component';
 @Component({
     selector: 'gallery-header',
-    
     template:`
         <div>Header</div>
        `
