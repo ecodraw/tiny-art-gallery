@@ -5,6 +5,7 @@ var tslint = require('gulp-tslint');
 var sass = require('gulp-ruby-sass');
 var tsProject = tsc.createProject('tsconfig.json');
 var config = require('./gulp.config')();
+var compass = require('gulp-compass');
 
 var browserSync = require('browser-sync');
 var superstatic = require('superstatic');
@@ -57,6 +58,16 @@ gulp.task('lib-copy', function() {
         .pipe(gulp.dest(config.destLibPath));
 });
 
+gulp.task('compass', function() {
+  gulp.src(config.allScss)
+    .pipe(compass({
+      config_file: './compass/config.rb',
+      css: 'stylesheets',
+      sass: 'sass'
+    }))
+    .pipe(gulp.dest(config.destLibPath));
+});
+
 gulp.task('watch', function(){
     gulp.watch([config.allTs], ['ts-lint', 'compile-ts']);
     gulp.watch(config.allScss, ['scss-transpile', 'ts-lint', 'compile-ts']);
@@ -64,7 +75,7 @@ gulp.task('watch', function(){
     gulp.watch([config.allJson], ['json-copy', 'ts-lint', 'compile-ts']);
 })
 
-gulp.task('dev', ['ts-lint', 'compile-ts', 'html-copy', 'scss-transpile', 'json-copy', 'resource-copy', 'lib-copy']);
+gulp.task('dev', ['ts-lint', 'compile-ts', 'html-copy', 'scss-transpile', 'compass','json-copy', 'resource-copy', 'lib-copy']);
 
 gulp.task('serve', ['dev', 'watch'], function() {
     	browserSync({
