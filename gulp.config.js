@@ -4,7 +4,7 @@ module.exports = function() {
         allScss: './src/**/*.scss',
         allJson: './src/**/*.json',
 		allTs: './src/**/*.ts',
-		allImages: './src/**/*.png',
+		allImages: './src/**/*.{png,jpg}',
 		allTypings: './typings/**/*.d.ts',
 		extLibs: [
             './src/vendor/**/*'

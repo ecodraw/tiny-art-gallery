@@ -9,7 +9,14 @@ import {Picture} from '../model/art-model';
     },
     styleUrls: ['app/components/art-picture.component.css'],
     template: `
-        <div class="picture">Name: {{picture.name}} Link: {{picture.link}}</div>
+         <div class="view viewbeta">
+         <img src="../resources/images/preview_default.jpg" />
+         <div class="mask">
+         <h2>Hover {{picture.name}}</h2>
+         <p>A wonderful serenity has taken this days</p>
+         <a href="#" class="info">{{picture.link}}</a>
+         </div>
+         </div>
        `
 })
 export class ArtPicture {

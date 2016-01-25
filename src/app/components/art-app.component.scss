@@ -4,13 +4,16 @@ div.View {
     margin: 10px;
     padding: 5px;
     background-color: yellow;
-    position: absolute;    
+    position: absolute;  
+    float: left; 
+    width: 500px;
+    height: 800px; 
 }
 div.Control {
     margin: 10px;
     padding: 5px;
     background-color: teal;
     position: absolute;
-    left: 200px;
+    left: 525px;
     
 }
