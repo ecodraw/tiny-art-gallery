@@ -78,7 +78,7 @@ gulp.task('serve', ['dev', 'watch'], function() {
             baseDir: ['./dist-root'],
             middleware: superstatic({ debug: false})
         }
-    });	
+    });
 });
 
 gulp.task('default', ['serve']);

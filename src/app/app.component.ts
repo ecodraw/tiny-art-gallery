@@ -1,21 +1,15 @@
 import {Component, Directive} from 'angular2/core';
 import {ArtApp} from './components/art-app.component';
-@Component({
-    selector: 'gallery-header',
-    template:`
-        <div>Header</div>
-       `
-})
-export class GalleryHeader {}
+import {GalleryApp} from './components/gallery-app.component';
 
 @Component({
     selector: 'my-app',
     styleUrls: ['app/app.component.css'],
-    directives: [GalleryHeader, ArtApp],
+    directives: [GalleryApp, ArtApp],
     template:`
         <h1 class="titel">Top</h1>
-        <gallery-header>...</gallery-header>
+        <gallery-app>...</gallery-app>
         <art-app>...</art-app>
        `
 })
-export class AppComponent { };
+export class AppComponent {};
