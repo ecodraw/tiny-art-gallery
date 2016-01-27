@@ -1,6 +1,6 @@
-@import '../resources/styles/common-variables';
+@import '../../resources/styles/common-variables';
 
-h1.titel {
+p {
     /* Positioning */
     position: static;
     top: 5px;
@@ -16,16 +16,16 @@ h1.titel {
     box-sizing: border-box;
 
     /* Box Model */
-    width: 800px;
+    width: 200px;
     height: 100px;
     padding: 10px;
     border: 1px solid;
-    border-radius: $radius-default;
+    border-radius: 5px;
     margin: 10px;
 
     /* Color */
     background: #fff;
-    color: $color-text-default;
+    color: #f00;
     border-color: blue;
     opacity: 0.5;
     
@@ -55,4 +55,4 @@ h1.titel {
     -webkit-transform-origin: 50% 52% 21%;
     transform-origin: 50% 52% 21%;
     */
-}
+} 
