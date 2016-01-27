@@ -1,19 +1,119 @@
 @import '../../resources/styles/common-variables';
 
 div.View {
+    /* Positioning */
+    position: static;
+    top: 5px;
+    left: 0;
+
+    /* Display */
+    overflow: visible;
+    display: block;
+    float: none;
+    z-index: 22;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Box Model */
+    width: 800px;
+    height: 600px;
+    padding: 10px;
+    border: 0px solid;
+    border-radius: $radius-default;
     margin: 10px;
-    padding: 5px;
-    background-color: yellow;
-    position: absolute;  
-    float: left; 
-    width: 500px;
-    height: 800px; 
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.4) ;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.4) ;
+
+    /* Color */
+    background: lightgrey;
+    color: $color-text-default;
+    border-color: black;
+    opacity: 0.5;
+    
+    /* Text */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 33px;
+    line-height: 1.4;
+    text-align: left;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    /* Other */
+    cursor: pointer;
+    
+    /* transition *
+    /*
+    -webkit-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -moz-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -o-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    */
+    
+    /* transform */
+    /*
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1.5) scaleZ(1) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(-3deg) scaleX(3) scaleZ(-4) translateX(16px) translateY(11px) translateZ(19px) skewX(0deg);
+    -webkit-transform-origin: 50% 52% 21%;
+    transform-origin: 50% 52% 21%;
+    */
 }
 div.Control {
-    margin: 10px;
-    padding: 5px;
-    background-color: teal;
+    /* Positioning */
     position: absolute;
-    left: 525px;
+    top: 5px;
+    right: 50px;
+
+    /* Display */
+    overflow: visible;
+    display: block;
+    float: none;
+    z-index: 22;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /* Box Model */
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    border: 0px solid;
+    border-radius: $radius-default;
+    margin: 10px;
+    -webkit-box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.4) ;
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.4) ;
+
+    /* Color */
+    background: lightgrey;
+    color: $color-text-default;
+    border-color: black;
+    opacity: 1;
+    
+    /* Text */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: left;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+
+    /* Other */
+    cursor: pointer;
+    
+    /* transition *
+    /*
+    -webkit-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -moz-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    -o-transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    transition: all 601ms cubic-bezier(0.68, -0.75, 0.265, 1.75);
+    */
+    
+    /* transform */
+    /*
+    -webkit-transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scaleX(1.5) scaleZ(1) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg);
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(-3deg) scaleX(3) scaleZ(-4) translateX(16px) translateY(11px) translateZ(19px) skewX(0deg);
+    -webkit-transform-origin: 50% 52% 21%;
+    transform-origin: 50% 52% 21%;
+    */
     
 }
