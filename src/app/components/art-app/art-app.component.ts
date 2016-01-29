@@ -1,7 +1,7 @@
 import {Component, Directive} from 'angular2/core';
 import {ArtControl} from './art-control.component';
 import {ArtImages} from './art-images.component';
-import {Picture, Collection} from '../../app/model/art-model';
+import {Picture, Collection} from '../../model/art-model';
 
 @Component({
     selector: 'art-app',

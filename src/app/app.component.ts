@@ -1,9 +1,9 @@
 import {Component, Directive} from 'angular2/core';
-import {ArtApp} from './components/art-app.component';
-import {GalleryApp} from './components/gallery-app.component';
+import {ArtApp} from './components/art-app/art-app.component';
+import {GalleryApp} from './components/gallery-app/gallery-app.component';
 
 @Component({
-    selector: 'my-app',
+    selector: 'app',
     styleUrls: ['app/app.component.css'],
     directives: [GalleryApp, ArtApp],
     template:`

@@ -1,5 +1,5 @@
 import {Component, Directive} from 'angular2/core';
-import {Collection} from '../model/art-model';
+import {Collection} from '../../model/art-model';
 
 @Component({
     selector: 'art-control',
