@@ -1,12 +1,12 @@
 import {Component, Directive} from 'angular2/core';
-import {ArtControl} from './art-control.component';
-import {ArtImages} from './art-images.component';
+import {ArtControl} from './art-control/art-control.component';
+import {ArtImages} from './art-images/art-images.component';
 import {Picture, Collection} from '../../model/art-model';
 
 @Component({
     selector: 'art-app',
     directives: [ArtImages, ArtControl],
-    styleUrls: ['app/components/art-app.component.css'],
+    styleUrls: ['app/components/art-app/art-app.component.css'],
     template: `
         <div class="View">
             <art-images [collection]="collection"> ...</art-images>

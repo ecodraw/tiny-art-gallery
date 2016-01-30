@@ -7,6 +7,7 @@ var tsProject = tsc.createProject('tsconfig.json');
 var config = require('./gulp.config')();
 var browserSync = require('browser-sync');
 var superstatic = require('superstatic');
+var del = require('del');
 
 gulp.task('ts-lint', function() {
     return gulp.src(config.allTs)
@@ -79,6 +80,10 @@ gulp.task('serve', ['dev', 'watch'], function() {
             middleware: superstatic({ debug: false})
         }
     });
+});
+
+gulp.task('clean', function() {
+    return del([config.destSrcPath]);
 });
 
 gulp.task('default', ['serve']);

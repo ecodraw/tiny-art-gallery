@@ -1,5 +1,5 @@
 import {Component, Directive} from 'angular2/core';
-import {Picture} from '../../model/art-model';
+import {Picture} from '../../../model/art-model';
 
 @Component({
     selector: 'art-picture',
@@ -7,7 +7,7 @@ import {Picture} from '../../model/art-model';
     host: {
         class: 'pic'
     },
-    styleUrls: ['app/components/art-picture.component.css'],
+    styleUrls: ['app/components/art-app/art-picture/art-picture.component.css'],
     template: `
          <div class="view viewbeta">
             <img src="../resources/images/preview_default.jpg" />

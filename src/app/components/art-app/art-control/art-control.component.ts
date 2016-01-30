@@ -1,10 +1,10 @@
 import {Component, Directive} from 'angular2/core';
-import {Collection} from '../../model/art-model';
+import {Collection} from '../../../model/art-model';
 
 @Component({
     selector: 'art-control',
     inputs: ['collection'],
-    styleUrls: ['app/components/art-control.component.css'],
+    styleUrls: ['app/components/art-app/art-control/art-control.component.css'],
     template: `
         <div>Control</div>
         <div class="field">

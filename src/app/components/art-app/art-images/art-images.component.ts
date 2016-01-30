@@ -1,6 +1,6 @@
 import {Component, Directive} from 'angular2/core';
-import {ArtPicture} from './art-picture.component';
-import {Picture, Collection} from '../../model/art-model';
+import {ArtPicture} from '../art-picture/art-picture.component';
+import {Picture, Collection} from '../../../model/art-model';
 
 @Component({
     selector: 'art-images',
@@ -9,7 +9,7 @@ import {Picture, Collection} from '../../model/art-model';
     host: {
         class: 'images'
     },
-    styleUrls: ['app/components/art-images.component.css'],
+    styleUrls: ['app/components/art-app/art-images/art-images.component.css'],
     template: `
         <art-picture *ngFor="#picture of collection.pictures"[picture]="picture"></art-picture>
         <div>Value: {{amount}}</div>
