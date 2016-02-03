@@ -75,13 +75,13 @@
     transition: all 0.5s linear;
     }
     &:hover img {
-    -webkit-transform: scale(10);
-    -moz-transform: scale(10);
-    -o-transform: scale(10);
-    -ms-transform: scale(10);
-    transform: scale(10);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(120);
+    -ms-transform: scale(2);
+    transform: scale(2);
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+    filter: alpha(opacity=50);
     opacity: 0;
     }
     &:hover .mask {

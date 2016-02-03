@@ -9,10 +9,10 @@ import {Picture, Collection} from '../../model/art-model';
     styleUrls: ['app/components/art-app/art-app.component.css'],
     template: `
         <div class="View">
-            <art-images [collection]="collection"> ...</art-images>
+            <art-images [collection]="collection"> ..images..</art-images>
         </div>
         <div class="Control">
-            <art-control [collection]="collection"> ...</art-control>
+            <art-control [collection]="collection"> ..control..</art-control>
         </div>
        `
 })

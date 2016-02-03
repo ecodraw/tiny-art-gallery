@@ -8,8 +8,8 @@ import {GalleryApp} from './components/gallery-app/gallery-app.component';
     directives: [GalleryApp, ArtApp],
     template:`
         <h1 class="titel">Top</h1>
-        <gallery-app>...</gallery-app>
-        <art-app>...</art-app>
+        <gallery-app>..galleryapp..</gallery-app>
+        <art-app>..artapp..</art-app>
        `
 })
 export class AppComponent {};

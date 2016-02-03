@@ -1,4 +1,18 @@
 @import '../../resources/styles/art-app-common-styles';
+.view {
+   width: 400px;
+   height: 400px;
+   margin: 10px;
+   float: left;
+   border: 20px solid #fff;
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;
+}
 
 .viewbeta{
     img {
@@ -75,14 +89,14 @@
     transition: all 0.5s linear;
     }
     &:hover img {
-    -webkit-transform: scale(10);
-    -moz-transform: scale(10);
-    -o-transform: scale(10);
-    -ms-transform: scale(10);
-    transform: scale(10);
-    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
-    opacity: 0;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=50);
+    opacity: 0.5;
     }
     &:hover .mask {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";

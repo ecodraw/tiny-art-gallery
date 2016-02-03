@@ -12,23 +12,19 @@ import {Picture, Collection} from '../../../model/art-model';
     },
     styleUrls: ['app/components/art-app/art-images/art-images.component.css'],
     template: `
-        <art-picture *ngFor="#picture of collection.pictures"[picture]="picture"></art-picture>
-        <art-image>. img .</art-image>
-        <div>Value: {{amount}}</div>
-        <br>
-        <br>
+        <art-picture [hidden]="isShown()" *ngFor="#picture of collection.pictures" 
+        [picture]="picture" [collection]="collection"></art-picture>
+        <art-image [hidden]="!isShown()" [picture]="theSelected()" [collection]="collection"></art-image>
        `
 })
 export class ArtImages {
     collection: Collection;
-    amount: number;
-    inputvalue: number;
+    picture: Picture;
 
-    constructor() {
-        this.amount = 44;
+    isShown(): boolean {
+        return this.collection.isDetailShown();
     }
-
-    getCount(): number {
-        return this.amount;
+    theSelected():  Picture {
+        return this.collection.selectedPicture;
     }
 }
