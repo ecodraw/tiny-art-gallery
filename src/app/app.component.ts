@@ -15,6 +15,6 @@ import {GalleryApp} from './components/gallery-app/gallery-app.component';
 })
 @RouteConfig([
     {path: '/art', name: 'Art', component: ArtApp, useAsDefault: true},
-    {path: '/contacts', name: 'Contacts', component: GalleryPage}
+    {path: '/contacts/:id', name: 'Contacts', component: GalleryPage}
 ])
 export class AppComponent {};

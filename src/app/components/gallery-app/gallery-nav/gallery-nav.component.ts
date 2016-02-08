@@ -7,8 +7,8 @@ import {ArtApp} from '../../art-app/art-app.component';
     directives: [ArtApp, ROUTER_DIRECTIVES],
     styleUrls: ['app/components/gallery-app/gallery-nav/gallery-nav.component.css'],
     template: `
-        <a [routerLink]="['Contacts']">Contacts</a>
-        <a [routerLink]="['Art']">Art</a>
+        <a [routerLink]="['/Contacts', {id: 5}]">Contacts</a>
+        <a [routerLink]="['/Art']">Art</a>
        `
 })
 export class GalleryNav { }
